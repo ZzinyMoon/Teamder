@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>프로필 수정</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Teamder</div>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <div class="form-box">
+          <h1 class="title">프로필 수정</h1>
+
+          <input type="text" id="major" class="input-box" placeholder="학과" />
+
+          <input
+            type="text"
+            id="skills"
+            class="input-box"
+            placeholder="보유 기술"
+          />
+
+          <textarea
+            id="intro"
+            rows="5"
+            class="input-box"
+            placeholder="자기소개"
+          >
+          </textarea>
+
+          <button class="primary-btn" onclick="updateProfile()">
+            저장하기
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/edit-profile.js"></script>
+  </body>
+</html>
