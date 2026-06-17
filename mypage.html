@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>마이페이지</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Teamder</div>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <h1 class="title">마이페이지</h1>
+
+        <p class="subtitle">내 정보 및 활동 관리</p>
+
+        <div class="card">
+          <a href="profile.html" class="menu-link"> 프로필 수정 </a>
+        </div>
+
+        <div class="card">
+          <a href="liked.html" class="menu-link"> 좋아요 목록 </a>
+        </div>
+
+        <div class="card">
+          <a href="matches.html" class="menu-link"> 보낸 매칭 요청 </a>
+        </div>
+
+        <div class="card">
+          <a href="received-matches.html" class="menu-link"> 받은 매칭 요청 </a>
+        </div>
+
+        <div class="card">
+          <a href="volunteer.html" class="menu-link"> 프로젝트 지원 현황 </a>
+        </div>
+
+        <br />
+
+        <button class="secondary-btn" onclick="logout()">로그아웃</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html"> 홈 </a>
+
+      <a href="match.html"> 탐색 </a>
+
+      <a href="liked.html"> 좋아요 </a>
+
+      <a href="projects.html"> 프로젝트 </a>
+
+      <a href="mypage.html" class="active"> 마이 </a>
+    </nav>
+
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>

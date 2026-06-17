@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카테고리 선택</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="logo">Teamder</div>
+
+      <nav class="menu">
+        <a href="index.html">홈</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <h1 class="title">
+          어떤 팀원을<br />
+          추천받고 싶나요?
+        </h1>
+
+        <p class="subtitle">
+          원하는 파트를 선택하면 해당 분야의 팀원만 추천됩니다.
+        </p>
+
+        <div class="select-grid">
+          <div class="select-card active" onclick="selectCategory(this)">
+            전체
+          </div>
+
+          <div class="select-card" onclick="selectCategory(this)">
+            프론트엔드
+          </div>
+
+          <div class="select-card" onclick="selectCategory(this)">백엔드</div>
+
+          <div class="select-card" onclick="selectCategory(this)">디자이너</div>
+
+          <div class="select-card" onclick="selectCategory(this)">기획자</div>
+
+          <div class="select-card" onclick="selectCategory(this)">
+            영상 편집
+          </div>
+
+          <div class="select-card" onclick="selectCategory(this)">3D/VFX</div>
+        </div>
+
+        <br />
+
+        <button class="primary-btn" onclick="saveCategory()">
+          매칭 시작하기
+        </button>
+      </section>
+    </main>
+
+    <script src="js/interest.js"></script>
+  </body>
+</html>

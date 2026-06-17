@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>모집글 작성</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Teamder</div>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <div class="form-box">
+          <h1 class="title">모집글 작성</h1>
+
+          <p class="subtitle">프로젝트 정보를 입력해주세요.</p>
+
+          <input
+            type="text"
+            id="title"
+            class="input-box"
+            placeholder="프로젝트 제목"
+          />
+
+          <input
+            type="text"
+            id="role"
+            class="input-box"
+            placeholder="모집 역할"
+          />
+
+          <textarea
+            id="desc"
+            class="input-box"
+            rows="6"
+            placeholder="프로젝트 설명"
+          >
+          </textarea>
+
+          <button class="primary-btn" onclick="saveProject()">등록하기</button>
+        </div>
+      </section>
+    </main>
+    <nav class="bottom-nav">
+      <a href="index.html">홈</a>
+      <a href="match.html">탐색</a>
+      <a href="liked.html">좋아요</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="mypage.html">마이</a>
+    </nav>
+    <script type="module" src="js/project.js"></script>
+  </body>
+</html>

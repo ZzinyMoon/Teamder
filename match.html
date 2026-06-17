@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>팀원 매칭</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">Teamder</div>
+
+      <nav class="menu">
+        <a href="interest.html">카테고리 변경</a>
+        <a href="liked.html">좋아요</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="page">
+        <h1 class="title" id="matchTitle">팀원 추천</h1>
+
+        <p class="subtitle" id="matchSubtitle">
+          선택한 분야에 맞는 팀원을 추천합니다.
+        </p>
+
+        <div class="match-wrapper">
+          <div class="match-card" onclick="openMember()">
+            <div class="profile-image" id="profileImage">Profile</div>
+
+            <h2 id="name"></h2>
+
+            <p id="major"></p>
+
+            <p id="role"></p>
+
+            <div class="skill-box" id="skillBox"></div>
+
+            <p id="intro"></p>
+
+            <div class="action-buttons">
+              <button
+                class="pass-btn"
+                onclick="
+                  event.stopPropagation();
+                  passMember();
+                "
+              >
+                ×
+              </button>
+
+              <button
+                class="like-btn"
+                onclick="
+                  event.stopPropagation();
+                  likeMember();
+                "
+              >
+                ♥
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html">홈</a>
+      <a href="match.html" class="active">탐색</a>
+      <a href="liked.html">좋아요</a>
+      <a href="projects.html">프로젝트</a>
+      <a href="mypage.html">마이</a>
+    </nav>
+
+    <script type="module" src="js/match.js"></script>
+  </body>
+</html>
