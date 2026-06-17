@@ -167,7 +167,7 @@ button {
   }
 }
 
-.hero {
+.student {
   min-height: calc(100vh - 78px);
 
   display: grid;
@@ -178,11 +178,11 @@ button {
   padding: 60px 0;
 }
 
-.hero-left {
+.student-left {
   position: relative;
 }
 
-.hero-left::before {
+.student-left::before {
   content: "TEAM MATCHING PLATFORM";
 
   display: inline-flex;
@@ -201,21 +201,21 @@ button {
   letter-spacing: 0.8px;
 }
 
-.hero-left .title {
+.student-left .title {
   font-size: 76px;
 }
 
-.hero-left .subtitle {
+.student-left .subtitle {
   max-width: 560px;
 }
 
-.hero-right {
+.student-right {
   display: flex;
   justify-content: center;
 }
 
-.hero-card,
-.hero-logo {
+.student-card,
+.student-logo {
   width: 100%;
   max-width: 430px;
   min-height: 430px;
@@ -239,8 +239,8 @@ button {
   overflow: hidden;
 }
 
-.hero-card::before,
-.hero-logo::before {
+.student-card::before,
+.student-logo::before {
   content: "";
 
   position: absolute;
@@ -254,8 +254,8 @@ button {
   background: rgba(22, 163, 74, 0.13);
 }
 
-.hero-card::after,
-.hero-logo::after {
+.student-card::after,
+.student-logo::after {
   content: "";
 
   position: absolute;
@@ -269,13 +269,13 @@ button {
   background: rgba(34, 197, 94, 0.12);
 }
 
-.hero-card > *,
-.hero-logo > * {
+.student-card > *,
+.student-logo > * {
   position: relative;
   z-index: 1;
 }
 
-.hero-card h2,
+.student-card h2,
 .guest-card h2 {
   font-size: 34px;
   font-weight: 950;
@@ -297,7 +297,7 @@ button {
   gap: 12px;
 }
 
-.hero-logo h1 {
+.student-logo h1 {
   font-size: 64px;
   font-weight: 950;
   color: var(--primary);
@@ -840,22 +840,22 @@ select.input-box {
     padding: 0 28px;
   }
 
-  .hero {
+  .student {
     grid-template-columns: 1fr;
     gap: 38px;
     text-align: center;
   }
 
-  .hero-left .title {
+  .student-left .title {
     font-size: 58px;
   }
 
-  .hero-left .subtitle {
+  .student-left .subtitle {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .hero-right {
+  .student-right {
     width: 100%;
   }
 }
@@ -902,17 +902,17 @@ select.input-box {
     margin-bottom: 26px;
   }
 
-  .hero {
+  .student {
     min-height: auto;
     padding: 46px 0;
   }
 
-  .hero-left .title {
+  .student-left .title {
     font-size: 44px;
   }
 
-  .hero-card,
-  .hero-logo {
+  .student-card,
+  .student-logo {
     min-height: 340px;
     padding: 32px;
   }
@@ -1007,7 +1007,7 @@ select.input-box {
     font-size: 34px;
   }
 
-  .hero-left .title {
+  .student-left .title {
     font-size: 40px;
   }
 

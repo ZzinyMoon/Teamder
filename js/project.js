@@ -24,7 +24,6 @@ if (!uid) {
   location.href = "login.html";
 }
 
-/* 프로젝트 작성 */
 window.saveProject = async function () {
   const title = document.getElementById("title").value;
 
@@ -56,7 +55,6 @@ window.saveProject = async function () {
   }
 };
 
-/* 프로젝트 목록 */
 async function renderProjects() {
   if (!projectList) return;
 
@@ -145,7 +143,6 @@ window.deleteProject = async function (id) {
   }
 };
 
-/* 프로젝트 상세 */
 async function renderProjectDetail() {
   if (!projectDetail) return;
 
@@ -217,7 +214,7 @@ async function renderProjectDetail() {
                 ? `
                     <button
                         class="primary-btn"
-                        onclick="viewApplicants()">
+                        onclick="viewVolunteers()">
                         지원자 보기
                     </button>
                 `
@@ -234,7 +231,6 @@ async function renderProjectDetail() {
     `;
 }
 
-/* 프로젝트 지원 */
 window.applyProject = async function (projectId) {
   try {
     const profileSnap = await getDoc(doc(db, "profiles", uid));
@@ -274,8 +270,7 @@ window.applyProject = async function (projectId) {
   }
 };
 
-/* 지원자 보기 */
-window.viewApplicants = function () {
+window.viewVolunteers = function () {
   location.href = "applicants.html";
 };
 

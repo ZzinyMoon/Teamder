@@ -12,10 +12,6 @@ import {
   getDoc,
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 
-/* =========================
-   회원가입
-========================= */
-
 window.signup = async function () {
   const name = document.getElementById("name").value;
 
@@ -70,10 +66,6 @@ window.signup = async function () {
   }
 };
 
-/* =========================
-   로그인
-========================= */
-
 window.login = async function () {
   const email = document.getElementById("email").value;
 
@@ -110,10 +102,6 @@ window.login = async function () {
     alert("로그인 실패 : " + error.message);
   }
 };
-
-/* =========================
-   로그아웃
-========================= */
 
 window.logout = async function () {
   try {

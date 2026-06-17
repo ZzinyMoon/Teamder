@@ -6,8 +6,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 
 const menu = document.getElementById("menu");
-const heroButtons = document.getElementById("heroButtons");
-const heroRight = document.getElementById("heroRight");
+const studentButtons = document.getElementById("studentButtons");
+const studentRight = document.getElementById("studentRight");
 
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 
@@ -18,7 +18,7 @@ if (isLoggedIn) {
     <a href="#" onclick="logout()">로그아웃</a>
   `;
 
-  heroButtons.innerHTML = `
+  studentButtons.innerHTML = `
     <div class="guest-buttons">
       <a href="match.html" class="primary-btn">
         팀원 찾기
@@ -30,14 +30,14 @@ if (isLoggedIn) {
     </div>
   `;
 
-  loadHeroCard();
+  loadStudentCard();
 } else {
   menu.innerHTML = `
     <a href="login.html">로그인</a>
     <a href="signup.html">회원가입</a>
   `;
 
-  heroButtons.innerHTML = `
+  studentButtons.innerHTML = `
     <div class="guest-buttons">
       <a href="login.html" class="primary-btn">
         로그인
@@ -49,8 +49,8 @@ if (isLoggedIn) {
     </div>
   `;
 
-  heroRight.innerHTML = `
-    <div class="hero-card guest-card">
+  studentRight.innerHTML = `
+    <div class="student-card guest-card">
       <h2>Teamder 시작하기</h2>
 
       <p>
@@ -79,7 +79,7 @@ window.logout = function () {
   location.reload();
 };
 
-async function loadHeroCard() {
+async function loadStudentCard() {
   const uid = localStorage.getItem("uid");
 
   if (!uid) return;
@@ -89,8 +89,8 @@ async function loadHeroCard() {
     const profileSnap = await getDoc(profileRef);
 
     if (!profileSnap.exists()) {
-      heroRight.innerHTML = `
-        <div class="hero-card">
+      studentRight.innerHTML = `
+        <div class="student-card">
           <h2>프로필을 등록하세요</h2>
 
           <p>
@@ -110,8 +110,8 @@ async function loadHeroCard() {
 
     const skills = profile.skills ? profile.skills.split(",") : [];
 
-    heroRight.innerHTML = `
-      <div class="hero-card">
+    studentRight.innerHTML = `
+      <div class="student-card">
         <div class="profile-image">
           ${(profile.name || "T").charAt(0)}
         </div>
