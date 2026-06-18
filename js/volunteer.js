@@ -32,7 +32,7 @@ async function loadVolunteers() {
   VolunteerList.innerHTML = "";
 
   const snapshot = await getDocs(
-    collection(db, "projects", projectId, "Volunteers"),
+    collection(db, "projects", projectId, "volunteers"),
   );
 
   if (snapshot.empty) {
@@ -121,7 +121,7 @@ window.hireVolunteer = async function (VolunteerUid) {
 
   try {
     await updateDoc(
-      doc(db, "projects", projectId, "Volunteers", VolunteerUid),
+      doc(db, "projects", projectId, "volunteers", VolunteerUid),
       {
         status: "채용완료",
       },

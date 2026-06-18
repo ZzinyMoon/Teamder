@@ -243,16 +243,18 @@ window.applyProject = async function (projectId) {
 
     const profile = profileSnap.data();
 
-    const applicantRef = doc(db, "projects", projectId, "applicants", uid);
+    const volunteerRef = doc(db, "projects", projectId, "volunteers", uid);
 
     const applicantSnap = await getDoc(applicantRef);
 
-    if (applicantSnap.exists()) {
+    const volunteerSnap = await getDoc(volunteerRef);
+
+    if (volunteerSnap.exists()) {
       alert("이미 지원한 프로젝트입니다.");
       return;
     }
 
-    await setDoc(applicantRef, {
+    await setDoc(volunteerRef, {
       uid,
       name: profile.name,
       role: profile.role,
